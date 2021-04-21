@@ -28,3 +28,14 @@
   margin-right: auto;
   border-radius: 6px;
 }
+
+.df > li {
+  margin: 0 0.45rem 0.45rem 0;
+  font-size: x-small;
+  padding: 5px;
+  display: inline-flex;
+  grid-gap: 16px;
+  background: greenyellow;
+  place-items: center;
+  border-radius: 6px;
+}
