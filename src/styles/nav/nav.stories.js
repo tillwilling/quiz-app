@@ -1,7 +1,7 @@
 import StaticHTML from './nav.html'
 
 export default {
-  title: 'Navigation',
+  title: 'nav',
 }
 
 export const HTML = () => StaticHTML
