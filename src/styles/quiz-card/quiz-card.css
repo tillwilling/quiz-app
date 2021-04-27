@@ -1,3 +1,7 @@
+body {
+  background: white;
+}
+
 .quiz-card {
   background: lightseagreen;
   color: #333;
@@ -23,6 +27,11 @@
   right: 8px;
 }
 
+.quiz-card__bookmark--checked {
+  border: 20px solid goldenrod;
+  border-bottom-color: transparent;
+}
+
 .quiz-card__button {
   background: goldenrod;
   display: block;
@@ -40,4 +49,16 @@
   background: greenyellow;
   place-items: center;
   border-radius: 6px;
+}
+
+.js-button-darkmode {
+  background: goldenrod;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 6px;
+}
+
+.darkmode {
+  background: #333;
 }

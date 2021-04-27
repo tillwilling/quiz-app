@@ -55,3 +55,22 @@ buttonProfile.addEventListener('click', () => {
   buttonCreate.classList.remove('active')
   buttonProfile.classList.add('active')
 })
+
+const buttonAnswer = document.querySelector('.quiz-card__button')
+const answer = document.querySelector('.quiz-card__answer')
+
+buttonAnswer.addEventListener('click', () => {
+  answer.classList.toggle('hidden')
+})
+
+const bookmarkFlag = document.querySelector('.quiz-card__bookmark')
+
+bookmarkFlag.addEventListener('click', () => {
+  bookmarkFlag.classList.toggle('quiz-card__bookmark--checked')
+})
+
+const buttonDarkmode = document.querySelector('.js-button-darkmode')
+const body = document.querySelector('body')
+buttonDarkmode.addEventListener('click', () => {
+  body.classList.toggle('darkmode')
+})
