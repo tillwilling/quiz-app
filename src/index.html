@@ -6,12 +6,86 @@
     <title>Quiz App</title>
     <link rel="icon" type="image/png" href="assets/favicon.png" />
     <link rel="stylesheet" href="styles/styles.css" />
+    <script defer type="module" src="./index.js"></script>
   </head>
   <body>
     <header class="app-header">
       <h1 class="app-header__heading">Quiz-App</h1>
     </header>
-    <main class="scrolling card-grid">
+    <main class="scrolling card-grid js-main-home">
+      <section class="quiz-card">
+        <div
+          role="button"
+          class="quiz-card__bookmark"
+          aria-label="add bookmark"
+        ></div>
+        <h1 class="quiz-card__heading">Frage</h1>
+        <p class="quiz-card__text">Wie schwer ist das Herz eines Blauwals?</p>
+        <button class="quiz-card__button">Zeige Antwort</button>
+        <p class="quiz-card__answer hidden">600-1000 Kg</p>
+        <ul class="quiz-card__taglist df">
+          <li>Natur</li>
+          <li>Wissenschaft</li>
+          <li>Tiere</li>
+          <li>Wasser</li>
+        </ul>
+      </section>
+
+      <section class="quiz-card">
+        <div
+          role="button"
+          class="quiz-card__bookmark"
+          aria-label="add bookmark"
+        ></div>
+        <h1 class="quiz-card__heading">Frage</h1>
+        <p class="quiz-card__text">Wie schwer ist das Herz eines Blauwals?</p>
+        <button class="quiz-card__button">Zeige Antwort</button>
+        <p class="quiz-card__answer hidden">600-1000 Kg</p>
+        <ul class="quiz-card__taglist df">
+          <li>Natur</li>
+          <li>Wissenschaft</li>
+          <li>Tiere</li>
+          <li>Wasser</li>
+        </ul>
+      </section>
+
+      <section class="quiz-card">
+        <div
+          role="button"
+          class="quiz-card__bookmark"
+          aria-label="add bookmark"
+        ></div>
+        <h1 class="quiz-card__heading">Frage</h1>
+        <p class="quiz-card__text">Wie schwer ist das Herz eines Blauwals?</p>
+        <button class="quiz-card__button">Zeige Antwort</button>
+        <p class="quiz-card__answer hidden">600-1000 Kg</p>
+        <ul class="quiz-card__taglist df">
+          <li>Natur</li>
+          <li>Wissenschaft</li>
+          <li>Tiere</li>
+          <li>Wasser</li>
+        </ul>
+      </section>
+
+      <section class="quiz-card">
+        <div
+          role="button"
+          class="quiz-card__bookmark"
+          aria-label="add bookmark"
+        ></div>
+        <h1 class="quiz-card__heading">Frage</h1>
+        <p class="quiz-card__text">Wie schwer ist das Herz eines Blauwals?</p>
+        <button class="quiz-card__button">Zeige Antwort</button>
+        <p class="quiz-card__answer hidden">600-1000 Kg</p>
+        <ul class="quiz-card__taglist df">
+          <li>Natur</li>
+          <li>Wissenschaft</li>
+          <li>Tiere</li>
+          <li>Wasser</li>
+        </ul>
+      </section>
+    </main>
+    <main class="scrolling card-grid js-main-bookmarked hidden">
       <section id="quiz-card1" class="quiz-card">
         <div
           role="button"
@@ -84,11 +158,30 @@
         </ul>
       </section>
     </main>
+    <main class="js-main-create hidden">
+      <form>
+        <label>
+          Add Question:
+          <textarea cols="30" rows="5"> </textarea>
+        </label>
+        <label>
+          Add Answer:
+          <textarea cols="30" rows="5"> </textarea>
+        </label>
+        <label for="tags">Tags</label>
+        <input id="tags" type="text" />
+        <button>Submit</button>
+      </form>
+    </main>
+    <main class="js-main-profile hidden">
+      <h2>Profile</h2>
+    </main>
+
     <nav class="nav">
-      <a class="center active" href="index.html">Home</a>
-      <a class="center active" href="bookmarked.html">Bookmarked</a>
-      <a class="center active" href="create.html">Create</a>
-      <a class="center active" href="profile.html">Settings</a>
+      <a class="js-button-home center active" href="#">Home</a>
+      <a class="js-button-bookmarked center" href="#">Bookmarked</a>
+      <a class="js-button-create center" href="#">Create</a>
+      <a class="js-button-profile center" href="#">Profile</a>
     </nav>
   </body>
 </html>
