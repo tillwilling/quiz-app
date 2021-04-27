@@ -87,11 +87,16 @@ body {
 
 .nav {
   display: grid;
-  grid-auto-flow: column;
-  background: hotpink;
+  gap: 1px;
+  grid-template-columns: repeat(4, 1fr);
+  background: #ccc;
 }
 
 .nav a {
   color: white;
   text-decoration: none;
+}
+
+.active {
+  background: steelblue;
 }
