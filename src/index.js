@@ -1,76 +1,82 @@
-const mainHome = document.querySelector('.js-main-home')
-const mainBookmarked = document.querySelector('.js-main-bookmarked')
-const mainCreate = document.querySelector('.js-main-create')
-const mainProfile = document.querySelector('.js-main-profile')
+import getElement from './utils/getElement'
 
-const buttonHome = document.querySelector('.js-button-home')
-const buttonBookmarked = document.querySelector('.js-button-bookmarked')
-const buttonCreate = document.querySelector('.js-button-create')
-const buttonProfile = document.querySelector('.js-button-profile')
+const mainHome = getElement('.js-main-home')
+const mainBookmarked = getElement('.js-main-bookmarked')
+const mainCreate = getElement('.js-main-create')
+const mainProfile = getElement('.js-main-profile')
 
-buttonHome.addEventListener('click', () => {
-  mainHome.classList.remove('hidden')
-  mainBookmarked.classList.add('hidden')
-  mainCreate.classList.add('hidden')
-  mainProfile.classList.add('hidden')
-
-  buttonHome.classList.add('active')
-  buttonBookmarked.classList.remove('active')
-  buttonCreate.classList.remove('active')
-  buttonProfile.classList.remove('active')
-})
-
-buttonBookmarked.addEventListener('click', () => {
-  mainHome.classList.add('hidden')
-  mainBookmarked.classList.remove('hidden')
-  mainCreate.classList.add('hidden')
-  mainProfile.classList.add('hidden')
-
-  buttonHome.classList.remove('active')
-  buttonBookmarked.classList.add('active')
-  buttonCreate.classList.remove('active')
-  buttonProfile.classList.remove('active')
-})
-
-buttonCreate.addEventListener('click', () => {
-  mainHome.classList.add('hidden')
-  mainBookmarked.classList.add('hidden')
-  mainCreate.classList.remove('hidden')
-  mainProfile.classList.add('hidden')
-
-  buttonHome.classList.remove('active')
-  buttonBookmarked.classList.remove('active')
-  buttonCreate.classList.add('active')
-  buttonProfile.classList.remove('active')
-})
-
-buttonProfile.addEventListener('click', () => {
-  mainHome.classList.add('hidden')
-  mainBookmarked.classList.add('hidden')
-  mainCreate.classList.add('hidden')
-  mainProfile.classList.remove('hidden')
-
-  buttonHome.classList.remove('active')
-  buttonBookmarked.classList.remove('active')
-  buttonCreate.classList.remove('active')
-  buttonProfile.classList.add('active')
-})
+const buttonHome = getElement('.js-button-home')
+const buttonBookmarked = getElement('.js-button-bookmarked')
+const buttonCreate = getElement('.js-button-create')
+const buttonProfile = getElement('.js-button-profile')
 
 const buttonAnswer = document.querySelector('.quiz-card__button')
 const answer = document.querySelector('.quiz-card__answer')
+
+const bookmarkFlag = document.querySelector('.quiz-card__bookmark')
+
+const buttonDarkmode = getElement('.js-button-darkmode')
+const body = getElement('body')
+
+buttonHome.addEventListener('click', () => {
+  allPagesHidden()
+  mainHome.classList.remove('hidden')
+
+  allButtonsNotActive()
+  buttonHome.classList.add('active')
+})
+
+buttonBookmarked.addEventListener('click', () => {
+  allPagesHidden()
+  mainBookmarked.classList.remove('hidden')
+
+  allButtonsNotActive()
+  buttonBookmarked.classList.add('active')
+})
+
+buttonCreate.addEventListener('click', () => {
+  allPagesHidden()
+  mainCreate.classList.remove('hidden')
+
+  allButtonsNotActive()
+  buttonCreate.classList.add('active')
+})
+
+buttonProfile.addEventListener('click', () => {
+  allPagesHidden()
+  mainProfile.classList.remove('hidden')
+
+  allButtonsNotActive()
+  buttonProfile.classList.add('active')
+})
 
 buttonAnswer.addEventListener('click', () => {
   answer.classList.toggle('hidden')
 })
 
-const bookmarkFlag = document.querySelector('.quiz-card__bookmark')
-
 bookmarkFlag.addEventListener('click', () => {
   bookmarkFlag.classList.toggle('quiz-card__bookmark--checked')
 })
 
-const buttonDarkmode = document.querySelector('.js-button-darkmode')
-const body = document.querySelector('body')
 buttonDarkmode.addEventListener('click', () => {
   body.classList.toggle('darkmode')
 })
+
+function allButtonsNotActive() {
+  buttonHome.classList.remove('active')
+  buttonBookmarked.classList.remove('active')
+  buttonCreate.classList.remove('active')
+  buttonProfile.classList.remove('active')
+}
+
+function allPagesHidden() {
+  mainHome.classList.add('hidden')
+  mainBookmarked.classList.add('hidden')
+  mainCreate.classList.add('hidden')
+  mainProfile.classList.add('hidden')
+}
+
+/* function changePage(page) {
+  allPagesHidden()
+  page.classList.remove('hidden')
+} */
