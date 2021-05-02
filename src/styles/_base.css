@@ -66,14 +66,10 @@ body {
   padding: 20px 4px;
 }
 
-/* fix padding-bottom rendering on grid: */
-.card-grid > *:last-child {
-  position: relative;
-}
 .card-grid > *:last-child::after {
   content: '';
   display: block;
-  position: absolute;
+  position: relative;
   top: 100%;
   left: 0;
   width: 100%;
