@@ -1,1 +1,46 @@
-/* 'dfwf' */
+.js-main-create {
+  padding: 10px;
+  margin: 30px 10px;
+  border: 0.5px #ddd solid;
+  border-radius: 30px;
+  max-width: 300px;
+  background-color: var(--color-card);
+  box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.226);
+  text-align: left;
+  position: relative;
+}
+
+.create-card__headline {
+  font-family: 'Orelega One', cursive;
+  font-size: 1.3rem;
+  line-height: 1rem;
+  margin: 1rem 1.25rem 0.5rem 20px;
+  color: var(--color-white);
+}
+
+.create-card__form {
+  margin: 30px 10px 10px 10px;
+}
+.create-card__item {
+  margin: 10px 0 40px 0;
+  border: 0.5px solid #ddd;
+  border-radius: 15px;
+  background-color: #f7f3e1;
+  width: 100%;
+}
+
+.create-card__text {
+  font-family: 'Orelega One', cursive;
+  font-size: 1rem;
+  color: var(--color-black);
+}
+
+.create-card__button {
+  width: 100%;
+  padding: 20px;
+  border: 0.5px #ddd solid;
+  border-radius: 15px;
+  background-color: var(--color-secondary-alt);
+  color: #333;
+  font-weight: 300;
+}
