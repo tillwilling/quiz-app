@@ -6,10 +6,197 @@
     <title>Quiz App</title>
     <link rel="icon" type="image/png" href="assets/favicon.png" />
     <link rel="stylesheet" href="styles/styles.css" />
+    <script defer type="module" src="./index.js"></script>
   </head>
   <body>
     <header class="app-header">
-      <h1 class="app-header__heading">Quiz App</h1>
+      <h1 class="app-header__heading">Quiz-App</h1>
     </header>
+    <main data-page="home" class="scrolling card-grid js-main-home">
+      <section class="quiz-card">
+        <div
+          role="button"
+          class="quiz-card__bookmark"
+          aria-label="add bookmark"
+        ></div>
+        <h1 class="quiz-card__heading">Frage</h1>
+        <p class="quiz-card__text">Wie schwer ist das Herz eines Blauwals?</p>
+        <button class="quiz-card__button">Zeige Antwort</button>
+        <p class="quiz-card__answer hidden">600-1000 Kg</p>
+        <ul class="quiz-card__taglist df">
+          <li>Natur</li>
+          <li>Wissenschaft</li>
+          <li>Tiere</li>
+          <li>Wasser</li>
+        </ul>
+      </section>
+
+      <section class="quiz-card">
+        <div
+          role="button"
+          class="quiz-card__bookmark"
+          aria-label="add bookmark"
+        ></div>
+        <h1 class="quiz-card__heading">Frage</h1>
+        <p class="quiz-card__text">Wie schwer ist das Herz eines Blauwals?</p>
+        <button class="quiz-card__button">Zeige Antwort</button>
+        <p class="quiz-card__answer hidden">600-1000 Kg</p>
+        <ul class="quiz-card__taglist df">
+          <li>Natur</li>
+          <li>Wissenschaft</li>
+          <li>Tiere</li>
+          <li>Wasser</li>
+        </ul>
+      </section>
+
+      <section class="quiz-card">
+        <div
+          role="button"
+          class="quiz-card__bookmark"
+          aria-label="add bookmark"
+        ></div>
+        <h1 class="quiz-card__heading">Frage</h1>
+        <p class="quiz-card__text">Wie schwer ist das Herz eines Blauwals?</p>
+        <button class="quiz-card__button">Zeige Antwort</button>
+        <p class="quiz-card__answer hidden">600-1000 Kg</p>
+        <ul class="quiz-card__taglist df">
+          <li>Natur</li>
+          <li>Wissenschaft</li>
+          <li>Tiere</li>
+          <li>Wasser</li>
+        </ul>
+      </section>
+
+      <section class="quiz-card">
+        <div
+          role="button"
+          class="quiz-card__bookmark"
+          aria-label="add bookmark"
+        ></div>
+        <h1 class="quiz-card__heading">Frage</h1>
+        <p class="quiz-card__text">Wie schwer ist das Herz eines Blauwals?</p>
+        <button class="quiz-card__button">Zeige Antwort</button>
+        <p class="quiz-card__answer hidden">600-1000 Kg</p>
+        <ul class="quiz-card__taglist df">
+          <li>Natur</li>
+          <li>Wissenschaft</li>
+          <li>Tiere</li>
+          <li>Wasser</li>
+        </ul>
+      </section>
+    </main>
+    <main
+      data-page="bookmarked"
+      class="scrolling card-grid js-main-bookmarked hidden"
+    >
+      <section id="quiz-card1" class="quiz-card">
+        <div
+          role="button"
+          class="quiz-card__bookmark"
+          aria-label="add bookmark"
+        ></div>
+        <h1 class="quiz-card__heading">Frage</h1>
+        <p class="quiz-card__text">Wie schwer ist das Herz eines Blauwals?</p>
+        <button class="quiz-card__button">Zeige Antwort</button>
+        <p class="quiz-card__answer hidden">600-1000 Kg</p>
+        <ul class="quiz-card__taglist df">
+          <li>Natur</li>
+          <li>Wissenschaft</li>
+          <li>Tiere</li>
+          <li>Wasser</li>
+        </ul>
+      </section>
+
+      <section id="quiz-card2" class="quiz-card">
+        <div
+          role="button"
+          class="quiz-card__bookmark"
+          aria-label="add bookmark"
+        ></div>
+        <h1 class="quiz-card__heading">Frage</h1>
+        <p class="quiz-card__text">Wie schwer ist das Herz eines Blauwals?</p>
+        <button class="quiz-card__button">Zeige Antwort</button>
+        <p class="quiz-card__answer hidden">600-1000 Kg</p>
+        <ul class="quiz-card__taglist df">
+          <li>Natur</li>
+          <li>Wissenschaft</li>
+          <li>Tiere</li>
+          <li>Wasser</li>
+        </ul>
+      </section>
+
+      <section id="quiz-card3" class="quiz-card">
+        <div
+          role="button"
+          class="quiz-card__bookmark"
+          aria-label="add bookmark"
+        ></div>
+        <h1 class="quiz-card__heading">Frage</h1>
+        <p class="quiz-card__text">Wie schwer ist das Herz eines Blauwals?</p>
+        <button class="quiz-card__button">Zeige Antwort</button>
+        <p class="quiz-card__answer hidden">600-1000 Kg</p>
+        <ul class="quiz-card__taglist df">
+          <li>Natur</li>
+          <li>Wissenschaft</li>
+          <li>Tiere</li>
+          <li>Wasser</li>
+        </ul>
+      </section>
+    </main>
+    <main data-page="create" class="js-main-create hidden">
+      <form action="" class="create-card__form">
+        <div class="">
+          <label for="question" class="create-card__headline"
+            >Add a question
+          </label>
+          <textarea
+            class="create-card__item"
+            id="question"
+            name="question"
+            rows="5"
+          ></textarea>
+        </div>
+        <div class="">
+          <label for="answer" class="create-card__headline"
+            >Add an answer:
+          </label>
+          <textarea
+            class="create-card__item"
+            id="answer"
+            name="answer"
+            rows="5"
+          ></textarea>
+        </div>
+        <div class="">
+          <label for="tags" class="create-card__headline"
+            >Add some tags<br /><span class="create-card__text"
+              >(divided by comma):</span
+            >
+          </label>
+          <textarea
+            class="create-card__item"
+            id="tags"
+            name="tags"
+            rows="2"
+          ></textarea>
+        </div>
+        <button class="create-card__button">Submit Card</button>
+      </form>
+    </main>
+    <main data-page="profile" class="js-main-profile hidden">
+      <h2>Profile</h2>
+      <button class="js-button-darkmode">Darkmode</button>
+    </main>
+
+    <nav class="nav">
+      <button data-nav="home" class="js-button-home center">Home</button>
+      <button data-nav="bookmarked" class="js-button-bookmarked center">
+        Bookmarked
+      </button>
+      <button data-nav="create" class="js-button-create center">Create</button>
+      <button data-nav="profile" class="js-button-profile center">
+        Profile
+      </button>
+    </nav>
   </body>
 </html>
