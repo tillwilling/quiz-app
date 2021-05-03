@@ -12,7 +12,7 @@
     <header class="app-header">
       <h1 class="app-header__heading">Quiz-App</h1>
     </header>
-    <main class="scrolling card-grid js-main-home">
+    <main data-page="home" class="scrolling card-grid js-main-home">
       <section class="quiz-card">
         <div
           role="button"
@@ -85,7 +85,10 @@
         </ul>
       </section>
     </main>
-    <main class="scrolling card-grid js-main-bookmarked hidden">
+    <main
+      data-page="bookmarked"
+      class="scrolling card-grid js-main-bookmarked hidden"
+    >
       <section id="quiz-card1" class="quiz-card">
         <div
           role="button"
@@ -140,7 +143,7 @@
         </ul>
       </section>
     </main>
-    <main class="js-main-create hidden">
+    <main data-page="create" class="js-main-create hidden">
       <form action="" class="create-card__form">
         <div class="">
           <label for="question" class="create-card__headline"
@@ -180,16 +183,20 @@
         <button class="create-card__button">Submit Card</button>
       </form>
     </main>
-    <main class="js-main-profile hidden">
+    <main data-page="profile" class="js-main-profile hidden">
       <h2>Profile</h2>
       <button class="js-button-darkmode">Darkmode</button>
     </main>
 
     <nav class="nav">
-      <a class="js-button-home center" href="#">Home</a>
-      <a class="js-button-bookmarked center" href="#">Bookmarked</a>
-      <a class="js-button-create center" href="#">Create</a>
-      <a class="js-button-profile center" href="#">Profile</a>
+      <button data-nav="home" class="js-button-home center">Home</button>
+      <button data-nav="bookmarked" class="js-button-bookmarked center">
+        Bookmarked
+      </button>
+      <button data-nav="create" class="js-button-create center">Create</button>
+      <button data-nav="profile" class="js-button-profile center">
+        Profile
+      </button>
     </nav>
   </body>
 </html>

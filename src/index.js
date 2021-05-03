@@ -1,82 +1,85 @@
-import getElement from './utils/getElement'
+import setupNavigation from './setupNavigation'
+setupNavigation()
 
-const mainHome = getElement('.js-main-home')
-const mainBookmarked = getElement('.js-main-bookmarked')
-const mainCreate = getElement('.js-main-create')
-const mainProfile = getElement('.js-main-profile')
+// import getElement from './utils/getElement'
 
-const buttonHome = getElement('.js-button-home')
-const buttonBookmarked = getElement('.js-button-bookmarked')
-const buttonCreate = getElement('.js-button-create')
-const buttonProfile = getElement('.js-button-profile')
+// const mainHome = getElement('.js-main-home')
+// const mainBookmarked = getElement('.js-main-bookmarked')
+// const mainCreate = getElement('.js-main-create')
+// const mainProfile = getElement('.js-main-profile')
 
-const buttonAnswer = document.querySelector('.quiz-card__button')
-const answer = document.querySelector('.quiz-card__answer')
+// const buttonHome = getElement('.js-button-home')
+// const buttonBookmarked = getElement('.js-button-bookmarked')
+// const buttonCreate = getElement('.js-button-create')
+// const buttonProfile = getElement('.js-button-profile')
 
-const bookmarkFlag = document.querySelector('.quiz-card__bookmark')
+// const buttonAnswer = document.querySelector('.quiz-card__button')
+// const answer = document.querySelector('.quiz-card__answer')
 
-const buttonDarkmode = getElement('.js-button-darkmode')
-const body = getElement('body')
+// const bookmarkFlag = document.querySelector('.quiz-card__bookmark')
 
-buttonHome.addEventListener('click', () => {
-  allPagesHidden()
-  mainHome.classList.remove('hidden')
+// const buttonDarkmode = getElement('.js-button-darkmode')
+// const body = getElement('body')
 
-  allButtonsNotActive()
-  buttonHome.classList.add('active')
-})
+// buttonHome.addEventListener('click', () => {
+//   allPagesHidden()
+//   mainHome.classList.remove('hidden')
 
-buttonBookmarked.addEventListener('click', () => {
-  allPagesHidden()
-  mainBookmarked.classList.remove('hidden')
+//   allButtonsNotActive()
+//   buttonHome.classList.add('active')
+// })
 
-  allButtonsNotActive()
-  buttonBookmarked.classList.add('active')
-})
+// buttonBookmarked.addEventListener('click', () => {
+//   allPagesHidden()
+//   mainBookmarked.classList.remove('hidden')
 
-buttonCreate.addEventListener('click', () => {
-  allPagesHidden()
-  mainCreate.classList.remove('hidden')
+//   allButtonsNotActive()
+//   buttonBookmarked.classList.add('active')
+// })
 
-  allButtonsNotActive()
-  buttonCreate.classList.add('active')
-})
+// buttonCreate.addEventListener('click', () => {
+//   allPagesHidden()
+//   mainCreate.classList.remove('hidden')
 
-buttonProfile.addEventListener('click', () => {
-  allPagesHidden()
-  mainProfile.classList.remove('hidden')
+//   allButtonsNotActive()
+//   buttonCreate.classList.add('active')
+// })
 
-  allButtonsNotActive()
-  buttonProfile.classList.add('active')
-})
+// buttonProfile.addEventListener('click', () => {
+//   allPagesHidden()
+//   mainProfile.classList.remove('hidden')
 
-buttonAnswer.addEventListener('click', () => {
-  answer.classList.toggle('hidden')
-})
+//   allButtonsNotActive()
+//   buttonProfile.classList.add('active')
+// })
 
-bookmarkFlag.addEventListener('click', () => {
-  bookmarkFlag.classList.toggle('quiz-card__bookmark--checked')
-})
+// buttonAnswer.addEventListener('click', () => {
+//   answer.classList.toggle('hidden')
+// })
 
-buttonDarkmode.addEventListener('click', () => {
-  body.classList.toggle('darkmode')
-})
+// bookmarkFlag.addEventListener('click', () => {
+//   bookmarkFlag.classList.toggle('quiz-card__bookmark--checked')
+// })
 
-function allButtonsNotActive() {
-  buttonHome.classList.remove('active')
-  buttonBookmarked.classList.remove('active')
-  buttonCreate.classList.remove('active')
-  buttonProfile.classList.remove('active')
-}
+// buttonDarkmode.addEventListener('click', () => {
+//   body.classList.toggle('darkmode')
+// })
 
-function allPagesHidden() {
-  mainHome.classList.add('hidden')
-  mainBookmarked.classList.add('hidden')
-  mainCreate.classList.add('hidden')
-  mainProfile.classList.add('hidden')
-}
+// function allButtonsNotActive() {
+//   buttonHome.classList.remove('active')
+//   buttonBookmarked.classList.remove('active')
+//   buttonCreate.classList.remove('active')
+//   buttonProfile.classList.remove('active')
+// }
 
-/* function changePage(page) {
-  allPagesHidden()
-  page.classList.remove('hidden')
-} */
+// function allPagesHidden() {
+//   mainHome.classList.add('hidden')
+//   mainBookmarked.classList.add('hidden')
+//   mainCreate.classList.add('hidden')
+//   mainProfile.classList.add('hidden')
+// }
+
+// /* function changePage(page) {
+//   allPagesHidden()
+//   page.classList.remove('hidden')
+// } */
